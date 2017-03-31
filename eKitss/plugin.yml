@@ -1,0 +1,40 @@
+name: eKits
+main: me.ekits.main.Main
+version: 1.0
+commands:
+  soldier:
+    description: Gives you the Soldier kit!
+  ghost:
+    description: Gives you the Ghost kit!  
+  ender:
+    description: Gives you the Ender kit!   
+  ninja:
+    description: Gives you the Ninja kit!         
+  assassin:
+    description: Gives you the Assassin kit! 
+  thor:
+    description: Gives you the Thor kit!       
+  medic:
+    description: Gives you the Medic kit!   
+  lavahound:
+    description: Gives you the Lavahound kit!          
+  lochness:
+    description: Gives you the Lochness kit!          
+  tank:
+    description: Gives you the Tank kit!   
+  tamer:
+    description: Gives you the Tamer kit!        
+  chameleon:
+    description: Gives you the Chameleon kit!     
+  viper:
+    description: Gives you the Viper kit!        
+  kangaroo:
+    description: Gives you the Kangaroo kit!   
+  fisherman:
+    description: Gives you the Fisherman kit!      
+  switcher:
+    description: Gives you the Switcher kit!         
+  phantom:
+    description: Gives you the Phantom kit!               
+  archer:
+    description: Gives you the Archer kit!                                                                           
