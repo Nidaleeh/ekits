@@ -33,6 +33,7 @@ import me.ekits.kits.Medic;
 import me.ekits.kits.Ninja;
 import me.ekits.kits.Phantom;
 import me.ekits.kits.Soldier;
+import me.ekits.kits.Speedy;
 import me.ekits.kits.Switcher;
 import me.ekits.kits.Tamer;
 import me.ekits.kits.Tank;
@@ -94,6 +95,7 @@ public class Main extends JavaPlugin{
 		pm.registerEvents(new Fishhook(this), this);
 		pm.registerEvents(new Switch(this), this);
 		pm.registerEvents(new Hitteleport(this), this);
+		pm.registerEvents(new Speedy(this), this);
 	}
 
 	public void registerCommands(){

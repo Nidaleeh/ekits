@@ -35,4 +35,6 @@ commands:
   phantom:
     description: Gives you the Phantom kit!               
   archer:
-    description: Gives you the Archer kit!                                                                           
+    description: Gives you the Archer kit!       
+  speedy:
+    description: Gives you the Speedy kit!                                                                         
