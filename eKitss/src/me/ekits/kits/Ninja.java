@@ -64,7 +64,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String commandLabel,
 			cmeta.addEnchant(Enchantment.DURABILITY, 3, true);
 			lchest.setItemMeta(cmeta);
 			// Legs
-			ItemStack llegs = new ItemStack(Material.LEATHER_CHESTPLATE);
+			ItemStack llegs = new ItemStack(Material.LEATHER_LEGGINGS);
 			LeatherArmorMeta lmeta = (LeatherArmorMeta) llegs.getItemMeta();
 			lmeta.setColor(Color.BLACK);	
 			lmeta.addEnchant(Enchantment.DURABILITY, 3, true);
