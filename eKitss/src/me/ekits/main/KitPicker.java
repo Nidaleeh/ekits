@@ -81,7 +81,7 @@ public class KitPicker implements Listener {
 	public static void onInventoryClick(InventoryClickEvent e) {
 		Player p = (Player) e.getWhoClicked(); 
 		
-		if (p.getOpenInventory().getTitle().equals("Kits!")) {
+		if (p.getOpenInventory().equals("Kits!")) {
 			if (e.getCurrentItem() != null) {
 				if (e.getCurrentItem().getType().equals(Material.IRON_SWORD)) {
 					p.chat("/soldier");
