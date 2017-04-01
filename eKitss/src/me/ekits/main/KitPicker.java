@@ -65,10 +65,10 @@ public class KitPicker implements Listener {
 		MedicMeta.setLore(MedicLore);
 		MedicChest.setItemMeta(MedicMeta);
 
-		inv.setItem(2, soldiersword);
-		inv.setItem(3, a1);
+		inv.setItem(0, soldiersword);
+		inv.setItem(2, a1);
 		inv.setItem(4, TankChest);
-		inv.setItem(5, MedicChest);
+		inv.setItem(6, MedicChest);
 		inv.setItem(44, off);
 		p.openInventory(inv);
 	}
