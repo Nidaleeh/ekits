@@ -167,6 +167,62 @@ public class KitPicker implements Listener {
 				p.chat("/medic");
 				p.closeInventory();
 			}
+			if (e.getCurrentItem().getType().equals(Material.LEASH)) {
+				if (p.hasPermission("ekits.vip")) {
+					p.chat("/assassin");
+					p.closeInventory();
+			}
+				
+			}
+			
+			if (e.getCurrentItem().getType().equals(Material.COAL)) {
+				if (p.hasPermission("ekits.vip")) {
+					p.chat("/ninja");
+					p.closeInventory();
+			}
+				
+				
+			}
+			if (e.getCurrentItem().getType().equals(Material.SPIDER_EYE)) {
+				if (p.hasPermission("ekits.vip")) {
+					p.chat("/viper");
+					p.closeInventory();
+			}
+				
+				
+			}
+			if (e.getCurrentItem().getType().equals(Material.STAINED_GLASS_PANE)) {
+				if (p.hasPermission("ekits.vip")) {
+					p.chat("/ghost");
+					p.closeInventory();
+			}
+				
+				
+			}
+			if (e.getCurrentItem().getType().equals(Material.WATER_BUCKET)) {
+				if (p.hasPermission("ekits.vip")) {
+					p.chat("/lochness");
+					p.closeInventory();
+			}
+				
+				
+			}
+			if (e.getCurrentItem().getType().equals(Material.LAVA_BUCKET)) {
+				if (p.hasPermission("ekits.vip")) {
+					p.chat("/lavahound");
+					p.closeInventory();
+			}
+				
+				
+			}
+			if (e.getCurrentItem().getType().equals(Material.SUGAR)) {
+				if (p.hasPermission("ekits.vip")) {
+					p.chat("/speedy");
+					p.closeInventory();
+			}
+				
+				
+			}
 			if (e.getCurrentItem().getType().equals(Material.REDSTONE_LAMP_OFF)) {
 				p.closeInventory();
 			}
