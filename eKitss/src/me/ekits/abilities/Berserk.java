@@ -37,10 +37,8 @@ public class Berserk implements Listener{
 		plugin.assassin2.add(p.getName());
 		Bukkit.getServer().getScheduler().scheduleAsyncDelayedTask(plugin, new Runnable() {
             public void run() {
-            		if(plugin.assassin.contains(p.getName())){
                     plugin.assassin2.remove(p.getName());
                     p.sendMessage("" + ChatColor.GREEN + ChatColor.BOLD + "You can Assassinate again!");
-            }
             }
     }, 600);
     return;

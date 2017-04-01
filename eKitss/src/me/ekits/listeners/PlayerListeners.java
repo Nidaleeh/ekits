@@ -1,7 +1,5 @@
 package me.ekits.listeners;
 
-import java.util.HashMap;
-
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -16,7 +14,6 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-
 import me.ekits.main.Main;
 
 public class PlayerListeners implements Listener{
@@ -25,7 +22,6 @@ public class PlayerListeners implements Listener{
 	public PlayerListeners(Main instance) {
 		this.plugin = instance;
 	}
-	HashMap<Player, Integer> cache = new HashMap<Player, Integer>();
 	
 	//When player joins the server
 	@EventHandler
@@ -101,49 +97,11 @@ public class PlayerListeners implements Listener{
 	public void onDrop(PlayerDropItemEvent e){
 		e.getItemDrop().remove();
 		if(!(e.getItemDrop().getItemStack().getType() == (Material.BOWL))){
-			e.getPlayer().sendMessage("" + ChatColor.RED + ChatColor.BOLD	 + "Sorry," + ChatColor.YELLOW + ChatColor.ITALIC + " but you " + ChatColor.YELLOW + ChatColor.UNDERLINE + "can't" + ChatColor.YELLOW + ChatColor.ITALIC + " drop this.");
+			e.getPlayer().sendMessage("" + ChatColor.RED + ChatColor.BOLD	 + "Sorry," + ChatColor.GOLD + ChatColor.ITALIC + " but you " + ChatColor.YELLOW + ChatColor.UNDERLINE + "can't" + ChatColor.YELLOW + ChatColor.ITALIC + " drop this.");
 			e.setCancelled(true);
 		}
-		}
-	    @EventHandler
-	    
-	    public void kill(PlayerDeathEvent event) {
-	        if (event.getEntity() instanceof Player) {
-	            Player killer = event.getEntity().getKiller();
-	            if (cache.containsKey(killer)) {
-	                cache.put(killer, cache.get(killer) + 1);
-	                if (cache.get(killer) == 3)
-	                    Bukkit.broadcastMessage(
-	                            ChatColor.GOLD.toString() + ChatColor.BOLD + killer.getName() + " has a 3 KillStreak! ");
-	                if (cache.get(killer) == 5)
-	                    Bukkit.broadcastMessage(
-	                            ChatColor.GOLD.toString() + ChatColor.BOLD + killer.getName() + " has a 5 KillStreak! ");
-	                if (cache.get(killer) == 7)
-	                    Bukkit.broadcastMessage(
-	                            ChatColor.GOLD.toString() + ChatColor.BOLD + killer.getName() + " has a 7 KillStreak! ");
-	                if (cache.get(killer) == 9)
-	                    Bukkit.broadcastMessage(
-	                            ChatColor.GOLD.toString() + ChatColor.BOLD + killer.getName() + " has a 9 KillStreak! ");
-	                if (cache.get(killer) == 11)
-	                    Bukkit.broadcastMessage(
-	                            ChatColor.GOLD.toString() + ChatColor.BOLD + killer.getName() + " has a 11 KillStreak! ");
-	            } else {
-	                cache.put(killer, 1);
-	            }
-	        }
-	    }
-	 
-	    @EventHandler
-	    public void death(PlayerDeathEvent event) {
-	        if (event.getEntity() instanceof Player) {
-	            Player player = event.getEntity();
-	            if (cache.containsKey(player)) {
-	                cache.remove(player);
-	                
-	               
-	            }
-	        }
-	}
+		}  
 }
+	 
 
 

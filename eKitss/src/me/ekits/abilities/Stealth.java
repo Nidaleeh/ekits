@@ -7,7 +7,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.Material;
-import org.bukkit.Sound;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -75,7 +74,6 @@ public class Stealth implements Listener {
 		if(p != null && p.getItemInHand() != null && p.getItemInHand().getItemMeta() != null && p.getItemInHand().getItemMeta().getDisplayName() != null){
 	    if(p.getInventory().getItemInHand().getItemMeta().getDisplayName().contains("Smoke bomb")){
 		if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK){
-		p.getWorld().playSound(p.getLocation(), Sound.FIZZ, 1, 1);
 	    p.sendMessage("" + ChatColor.GRAY + ChatColor.BOLD + "You are now invisible");
 	    p.getInventory().removeItem(smokebomb);
 	    p.removePotionEffect(PotionEffectType.SPEED);
@@ -87,17 +85,14 @@ public class Stealth implements Listener {
 		plugin.ninja.add(p.getName());
 		Bukkit.getServer().getScheduler().scheduleAsyncDelayedTask(plugin, new Runnable() {
             public void run() {
-            	if(plugin.ninja2.contains(p.getName())){
-                    plugin.ninja.remove(p.getName());
-                    p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 99999, 0));
-                    p.getInventory().addItem(smokebomb);
-            		p.getInventory().setHelmet(lhelm);
-            		p.getInventory().setChestplate(lchest);
-            		p.getInventory().setLeggings(llegs);
-            		p.getInventory().setBoots(lboots);
-            		p.getWorld().playSound(p.getLocation(),Sound.CHICKEN_EGG_POP, 1, 1);
-                    p.sendMessage("" + ChatColor.GREEN + ChatColor.BOLD + "You have regained your armor and you can use stealth again!");
-            }
+                plugin.ninja.remove(p.getName());
+                p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 99999, 0));
+                p.getInventory().addItem(smokebomb);
+        		p.getInventory().setHelmet(lhelm);
+        		p.getInventory().setChestplate(lchest);
+        		p.getInventory().setLeggings(llegs);
+        		p.getInventory().setBoots(lboots);
+                p.sendMessage("" + ChatColor.GREEN + ChatColor.BOLD + "You have regained your armor and you can use stealth again!");
             }
     }, 200);
     return;
@@ -108,8 +103,8 @@ else {
 }
 
 		
-		}
-	}
 }
 		}
-	    }
+		}
+}
+	}
