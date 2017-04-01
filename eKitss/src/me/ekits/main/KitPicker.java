@@ -25,7 +25,7 @@ public class KitPicker implements Listener {
 	}
 
 	public static void openGUI(Player p) {
-		Inventory inv = Bukkit.createInventory(null, 54, ChatColor.DARK_AQUA
+		Inventory inv = Bukkit.createInventory(null, 45, ChatColor.DARK_AQUA
 				+ "Kits!");
 		ItemStack soldiersword = new ItemStack(Material.IRON_SWORD);
 		ItemMeta soldiermeta = soldiersword.getItemMeta();
@@ -65,11 +65,11 @@ public class KitPicker implements Listener {
 		MedicMeta.setLore(MedicLore);
 		MedicChest.setItemMeta(MedicMeta);
 
-		inv.setItem(0, soldiersword);
-		inv.setItem(1, a1);
-		inv.setItem(2, TankChest);
-		inv.setItem(3, MedicChest);
-		inv.setItem(53, off);
+		inv.setItem(2, soldiersword);
+		inv.setItem(3, a1);
+		inv.setItem(4, TankChest);
+		inv.setItem(5, MedicChest);
+		inv.setItem(44, off);
 		p.openInventory(inv);
 	}
 
