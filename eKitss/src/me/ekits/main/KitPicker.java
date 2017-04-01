@@ -64,70 +64,68 @@ public class KitPicker implements Listener {
 		MedicLore.add("" + ChatColor.GRAY + "Select the Medic Class!");
 		MedicMeta.setLore(MedicLore);
 		MedicChest.setItemMeta(MedicMeta);
-		
+
 		ItemStack AssassinLeash = new ItemStack(Material.LEASH);
 		ItemMeta AssassinMeta = AssassinLeash.getItemMeta();
 		AssassinMeta.setDisplayName(ChatColor.GREEN + "Assassin");
-        List<String> AssassinLore = new ArrayList<String>();
-        AssassinLore.add("" + ChatColor.GREEN + "Select the Assassin Class!");
-        AssassinMeta.setLore(AssassinLore);
-        AssassinLeash.setItemMeta(AssassinMeta);
-        
-        ItemStack NinjaCoal = new ItemStack(Material.COAL);
-        ItemMeta NinjaMeta = NinjaCoal.getItemMeta();
-        NinjaMeta.setDisplayName(ChatColor.GREEN + "Ninja");
-        List<String> NinjaLore = new ArrayList<String>();
-        NinjaLore.add("" + ChatColor.GREEN + "Select the Ninja Class!");
-        NinjaMeta.setLore(NinjaLore);
-        NinjaCoal.setItemMeta(NinjaMeta);
-        
-        ItemStack ViperEye = new ItemStack(Material.SPIDER_EYE);
-        ItemMeta ViperMeta = ViperEye.getItemMeta();
-        ViperMeta.setDisplayName(ChatColor.GREEN + "Viper");
-        List<String> ViperLore = new ArrayList<String>();
-        ViperLore.add("" + ChatColor.GREEN + "Select the Viper Class!");
-        ViperMeta.setLore(ViperLore);
-        ViperEye.setItemMeta(ViperMeta);
-        
-        ItemStack GhostPane = new ItemStack(Material.STAINED_GLASS_PANE);
-        ItemMeta GhostMeta = GhostPane.getItemMeta();
-        GhostMeta.setDisplayName(ChatColor.GREEN + "Ghost");
-        List<String> GhostLore = new ArrayList<String>();
-        GhostLore.add("" + ChatColor.GREEN + "Select the Ghost Class!");
-        GhostMeta.setLore(GhostLore);
-        GhostPane.setItemMeta(GhostMeta);
-        
-        ItemStack LavaBucket = new ItemStack(Material.LAVA_BUCKET);
-        ItemMeta LavaMeta = LavaBucket.getItemMeta();
-        LavaMeta.setDisplayName(ChatColor.GREEN + "Lavahound");
-        List<String> LavaLore = new ArrayList<String>();
-        LavaLore.add("" + ChatColor.GREEN + "Select the Lava Class!");
-        LavaMeta.setLore(LavaLore);
-        LavaBucket.setItemMeta(LavaMeta);
-        
-        ItemStack LochnessBucket = new ItemStack(Material.WATER_BUCKET);
-        ItemMeta LochnessMeta = LochnessBucket.getItemMeta();
-        LochnessMeta.setDisplayName(ChatColor.GREEN + "Lochness");
-        List<String> LochnessLore = new ArrayList<String>();
-        LochnessLore.add("" + ChatColor.GREEN + "Select the Lochness Class!");
-        LochnessMeta.setLore(LochnessLore);
-        LochnessBucket.setItemMeta(LochnessMeta);
-        
-        ItemStack SpeedySugar = new ItemStack(Material.SUGAR);
-        ItemMeta SugarMeta = SpeedySugar.getItemMeta();
-        SugarMeta.setDisplayName(ChatColor.GREEN + "Speedy");
-        List<String> SpeedyLore = new ArrayList<String>();
-        SpeedyLore.add("" + ChatColor.GREEN + "Select the Speedy Class!");
-        SugarMeta.setLore(SpeedyLore);
-        SpeedySugar.setItemMeta(SugarMeta);
-        
-        
-        
+		List<String> AssassinLore = new ArrayList<String>();
+		AssassinLore.add("" + ChatColor.GREEN + "Select the Assassin Class!");
+		AssassinMeta.setLore(AssassinLore);
+		AssassinLeash.setItemMeta(AssassinMeta);
+
+		ItemStack NinjaCoal = new ItemStack(Material.COAL);
+		ItemMeta NinjaMeta = NinjaCoal.getItemMeta();
+		NinjaMeta.setDisplayName(ChatColor.GREEN + "Ninja");
+		List<String> NinjaLore = new ArrayList<String>();
+		NinjaLore.add("" + ChatColor.GREEN + "Select the Ninja Class!");
+		NinjaMeta.setLore(NinjaLore);
+		NinjaCoal.setItemMeta(NinjaMeta);
+
+		ItemStack ViperEye = new ItemStack(Material.SPIDER_EYE);
+		ItemMeta ViperMeta = ViperEye.getItemMeta();
+		ViperMeta.setDisplayName(ChatColor.GREEN + "Viper");
+		List<String> ViperLore = new ArrayList<String>();
+		ViperLore.add("" + ChatColor.GREEN + "Select the Viper Class!");
+		ViperMeta.setLore(ViperLore);
+		ViperEye.setItemMeta(ViperMeta);
+
+		ItemStack GhostPane = new ItemStack(Material.STAINED_GLASS_PANE);
+		ItemMeta GhostMeta = GhostPane.getItemMeta();
+		GhostMeta.setDisplayName(ChatColor.GREEN + "Ghost");
+		List<String> GhostLore = new ArrayList<String>();
+		GhostLore.add("" + ChatColor.GREEN + "Select the Ghost Class!");
+		GhostMeta.setLore(GhostLore);
+		GhostPane.setItemMeta(GhostMeta);
+
+		ItemStack LavaBucket = new ItemStack(Material.LAVA_BUCKET);
+		ItemMeta LavaMeta = LavaBucket.getItemMeta();
+		LavaMeta.setDisplayName(ChatColor.GREEN + "Lavahound");
+		List<String> LavaLore = new ArrayList<String>();
+		LavaLore.add("" + ChatColor.GREEN + "Select the Lava Class!");
+		LavaMeta.setLore(LavaLore);
+		LavaBucket.setItemMeta(LavaMeta);
+
+		ItemStack LochnessBucket = new ItemStack(Material.WATER_BUCKET);
+		ItemMeta LochnessMeta = LochnessBucket.getItemMeta();
+		LochnessMeta.setDisplayName(ChatColor.GREEN + "Lochness");
+		List<String> LochnessLore = new ArrayList<String>();
+		LochnessLore.add("" + ChatColor.GREEN + "Select the Lochness Class!");
+		LochnessMeta.setLore(LochnessLore);
+		LochnessBucket.setItemMeta(LochnessMeta);
+
+		ItemStack SpeedySugar = new ItemStack(Material.SUGAR);
+		ItemMeta SugarMeta = SpeedySugar.getItemMeta();
+		SugarMeta.setDisplayName(ChatColor.GREEN + "Speedy");
+		List<String> SpeedyLore = new ArrayList<String>();
+		SpeedyLore.add("" + ChatColor.GREEN + "Select the Speedy Class!");
+		SugarMeta.setLore(SpeedyLore);
+		SpeedySugar.setItemMeta(SugarMeta);
+
 		inv.setItem(1, soldiersword);
 		inv.setItem(3, a1);
 		inv.setItem(5, TankChest);
 		inv.setItem(7, MedicChest);
-		inv.setItem(9 , AssassinLeash);
+		inv.setItem(9, AssassinLeash);
 		inv.setItem(11, NinjaCoal);
 		inv.setItem(13, ViperEye);
 		inv.setItem(15, GhostPane);
@@ -135,9 +133,6 @@ public class KitPicker implements Listener {
 		inv.setItem(19, LochnessBucket);
 		inv.setItem(21, SpeedySugar);
 
-		
-		
-		
 		inv.setItem(44, off);
 		p.openInventory(inv);
 	}
@@ -168,60 +163,48 @@ public class KitPicker implements Listener {
 				p.closeInventory();
 			}
 			if (e.getCurrentItem().getType().equals(Material.LEASH)) {
-				if (p.hasPermission("ekits.vip")) {
-					p.chat("/assassin");
-					p.closeInventory();
+
+				p.chat("/assassin");
+				p.closeInventory();
+
 			}
-				
-			}
-			
+
 			if (e.getCurrentItem().getType().equals(Material.COAL)) {
-				if (p.hasPermission("ekits.vip")) {
-					p.chat("/ninja");
-					p.closeInventory();
-			}
-				
-				
+
+				p.chat("/ninja");
+				p.closeInventory();
+
 			}
 			if (e.getCurrentItem().getType().equals(Material.SPIDER_EYE)) {
-				if (p.hasPermission("ekits.vip")) {
-					p.chat("/viper");
-					p.closeInventory();
+
+				p.chat("/viper");
+				p.closeInventory();
+
 			}
-				
-				
-			}
-			if (e.getCurrentItem().getType().equals(Material.STAINED_GLASS_PANE)) {
-				if (p.hasPermission("ekits.vip")) {
-					p.chat("/ghost");
-					p.closeInventory();
-			}
-				
-				
+			if (e.getCurrentItem().getType()
+					.equals(Material.STAINED_GLASS_PANE)) {
+
+				p.chat("/ghost");
+				p.closeInventory();
+
 			}
 			if (e.getCurrentItem().getType().equals(Material.WATER_BUCKET)) {
-				if (p.hasPermission("ekits.vip")) {
-					p.chat("/lochness");
-					p.closeInventory();
-			}
-				
-				
+
+				p.chat("/lochness");
+				p.closeInventory();
+
 			}
 			if (e.getCurrentItem().getType().equals(Material.LAVA_BUCKET)) {
-				if (p.hasPermission("ekits.vip")) {
-					p.chat("/lavahound");
-					p.closeInventory();
-			}
-				
-				
+
+				p.chat("/lavahound");
+				p.closeInventory();
+
 			}
 			if (e.getCurrentItem().getType().equals(Material.SUGAR)) {
-				if (p.hasPermission("ekits.vip")) {
-					p.chat("/speedy");
-					p.closeInventory();
-			}
-				
-				
+
+				p.chat("/speedy");
+				p.closeInventory();
+
 			}
 			if (e.getCurrentItem().getType().equals(Material.REDSTONE_LAMP_OFF)) {
 				p.closeInventory();
