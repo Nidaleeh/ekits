@@ -64,11 +64,80 @@ public class KitPicker implements Listener {
 		MedicLore.add("" + ChatColor.GRAY + "Select the Medic Class!");
 		MedicMeta.setLore(MedicLore);
 		MedicChest.setItemMeta(MedicMeta);
-
+		
+		ItemStack AssassinLeash = new ItemStack(Material.LEASH);
+		ItemMeta AssassinMeta = AssassinLeash.getItemMeta();
+		AssassinMeta.setDisplayName(ChatColor.GREEN + "Assassin");
+        List<String> AssassinLore = new ArrayList<String>();
+        AssassinLore.add("" + ChatColor.GREEN + "Select the Assassin Class!");
+        AssassinMeta.setLore(AssassinLore);
+        AssassinLeash.setItemMeta(AssassinMeta);
+        
+        ItemStack NinjaCoal = new ItemStack(Material.COAL);
+        ItemMeta NinjaMeta = NinjaCoal.getItemMeta();
+        NinjaMeta.setDisplayName(ChatColor.GREEN + "Ninja");
+        List<String> NinjaLore = new ArrayList<String>();
+        NinjaLore.add("" + ChatColor.GREEN + "Select the Ninja Class!");
+        NinjaMeta.setLore(NinjaLore);
+        NinjaCoal.setItemMeta(NinjaMeta);
+        
+        ItemStack ViperEye = new ItemStack(Material.SPIDER_EYE);
+        ItemMeta ViperMeta = ViperEye.getItemMeta();
+        ViperMeta.setDisplayName(ChatColor.GREEN + "Viper");
+        List<String> ViperLore = new ArrayList<String>();
+        ViperLore.add("" + ChatColor.GREEN + "Select the Viper Class!");
+        ViperMeta.setLore(ViperLore);
+        ViperEye.setItemMeta(ViperMeta);
+        
+        ItemStack GhostPane = new ItemStack(Material.STAINED_GLASS_PANE);
+        ItemMeta GhostMeta = GhostPane.getItemMeta();
+        GhostMeta.setDisplayName(ChatColor.GREEN + "Ghost");
+        List<String> GhostLore = new ArrayList<String>();
+        GhostLore.add("" + ChatColor.GREEN + "Select the Ghost Class!");
+        GhostMeta.setLore(GhostLore);
+        GhostPane.setItemMeta(GhostMeta);
+        
+        ItemStack LavaBucket = new ItemStack(Material.LAVA_BUCKET);
+        ItemMeta LavaMeta = LavaBucket.getItemMeta();
+        LavaMeta.setDisplayName(ChatColor.GREEN + "Lavahound");
+        List<String> LavaLore = new ArrayList<String>();
+        LavaLore.add("" + ChatColor.GREEN + "Select the Lava Class!");
+        LavaMeta.setLore(LavaLore);
+        LavaBucket.setItemMeta(LavaMeta);
+        
+        ItemStack LochnessBucket = new ItemStack(Material.WATER_BUCKET);
+        ItemMeta LochnessMeta = LochnessBucket.getItemMeta();
+        LochnessMeta.setDisplayName(ChatColor.GREEN + "Lochness");
+        List<String> LochnessLore = new ArrayList<String>();
+        LochnessLore.add("" + ChatColor.GREEN + "Select the Lochness Class!");
+        LochnessMeta.setLore(LochnessLore);
+        LochnessBucket.setItemMeta(LochnessMeta);
+        
+        ItemStack SpeedySugar = new ItemStack(Material.SUGAR);
+        ItemMeta SugarMeta = SpeedySugar.getItemMeta();
+        SugarMeta.setDisplayName(ChatColor.GREEN + "Speedy");
+        List<String> SpeedyLore = new ArrayList<String>();
+        SpeedyLore.add("" + ChatColor.GREEN + "Select the Speedy Class!");
+        SugarMeta.setLore(SpeedyLore);
+        SpeedySugar.setItemMeta(SugarMeta);
+        
+        
+        
 		inv.setItem(1, soldiersword);
 		inv.setItem(3, a1);
 		inv.setItem(5, TankChest);
 		inv.setItem(7, MedicChest);
+		inv.setItem(9 , AssassinLeash);
+		inv.setItem(11, NinjaCoal);
+		inv.setItem(13, ViperEye);
+		inv.setItem(15, GhostPane);
+		inv.setItem(17, LavaBucket);
+		inv.setItem(19, LochnessBucket);
+		inv.setItem(21, SpeedySugar);
+
+		
+		
+		
 		inv.setItem(44, off);
 		p.openInventory(inv);
 	}
