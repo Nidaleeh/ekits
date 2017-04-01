@@ -45,12 +45,10 @@ public class KitPicker implements Listener {
 		lore1.add("" + ChatColor.GRAY + "Select the Archer Class!");
 		am1.setLore(lore1);
 		a1.setItemMeta(am1);
-		
-		
 
 		offm.setDisplayName(ChatColor.RED + "Close");
 		off.setItemMeta(offm);
-		
+
 		ItemStack TankChest = new ItemStack(Material.DIAMOND_CHESTPLATE);
 		ItemMeta TankMeta = TankChest.getItemMeta();
 		TankMeta.setDisplayName(ChatColor.DARK_GRAY + "Tank");
@@ -58,16 +56,14 @@ public class KitPicker implements Listener {
 		TankLore.add("" + ChatColor.GRAY + "Select the Tank Class!");
 		TankMeta.setLore(TankLore);
 		TankChest.setItemMeta(TankMeta);
-		
-		ItemStack MedicChest  = new ItemStack(Material.GOLD_CHESTPLATE);
+
+		ItemStack MedicChest = new ItemStack(Material.GOLD_CHESTPLATE);
 		ItemMeta MedicMeta = MedicChest.getItemMeta();
 		MedicMeta.setDisplayName(ChatColor.DARK_GRAY + "Medic");
 		List<String> MedicLore = new ArrayList<String>();
 		MedicLore.add("" + ChatColor.GRAY + "Select the Medic Class!");
 		MedicMeta.setLore(MedicLore);
 		MedicChest.setItemMeta(MedicMeta);
-		
-		
 
 		inv.setItem(0, soldiersword);
 		inv.setItem(1, a1);
@@ -79,38 +75,33 @@ public class KitPicker implements Listener {
 
 	@EventHandler
 	public static void onInventoryClick(InventoryClickEvent e) {
-		Player p = (Player) e.getWhoClicked(); 
-		
+		Player p = (Player) e.getWhoClicked(); // The player that clicked the
+												// item
 		if (p.getOpenInventory().equals("Kits!")) {
-			if (e.getCurrentItem() != null) {
-				e.setCancelled(true);
-				if (e.getCurrentItem().getType().equals(Material.IRON_SWORD)) {
-					p.chat("/soldier");
-					p.closeInventory();
-					
-				}
-				if (e.getCurrentItem().getType().equals(Material.BOW)) {
-					p.chat("/archer");
-					p.closeInventory();
-					
-				}
-				if (e.getCurrentItem().getType()
-						.equals(Material.REDSTONE_LAMP_OFF)) {
-					p.closeInventory();
-					
-				}
-				if(e.getCurrentItem().getType().equals(Material.DIAMOND_CHESTPLATE)){
-					p.chat("/tank");
-					p.closeInventory();
-					
-				}
-				if(e.getCurrentItem().getType().equals(Material.GOLD_CHESTPLATE)){
-					p.chat("/medic");
-					p.closeInventory();
-					
-				}
+			e.setCancelled(true);
+		}
+		if (e.getCurrentItem() != null) {
+			if (e.getCurrentItem().getType().equals(Material.IRON_SWORD)) {
+				p.chat("/soldier");
+				p.closeInventory();
 			}
-
+			if (e.getCurrentItem().getType().equals(Material.BOW)) {
+				p.chat("/archer");
+				p.closeInventory();
+			}
+			if (e.getCurrentItem().getType()
+					.equals(Material.DIAMOND_CHESTPLATE)) {
+				p.chat("/tank");
+				p.closeInventory();
+			}
+			if (e.getCurrentItem().getType().equals(Material.GOLD_CHESTPLATE)) {
+				p.chat("/medic");
+				p.closeInventory();
+			}
+			if (e.getCurrentItem().getType().equals(Material.REDSTONE_LAMP_OFF)) {
+				p.closeInventory();
+			}
+			return;
 		}
 	}
 
