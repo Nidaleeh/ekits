@@ -27,9 +27,7 @@ commands:
   chameleon:
     description: Gives you the Chameleon kit!     
   viper:
-    description: Gives you the Viper kit!        
-  kangaroo:
-    description: Gives you the Kangaroo kit!   
+    description: Gives you the Viper kit!         
   fisherman:
     description: Gives you the Fisherman kit!      
   switcher:

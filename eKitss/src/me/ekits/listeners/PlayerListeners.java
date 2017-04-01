@@ -47,7 +47,7 @@ public class PlayerListeners implements Listener{
 		Player p = e.getEntity();
 		String pname = p.getName();
 		if(p.getKiller() == null){
-			e.setDeathMessage("" + ChatColor.GREEN + pname + ChatColor.AQUA + " got rekt by an " + ChatColor.DARK_RED + ChatColor.BOLD + "ADMIN");	
+			e.setDeathMessage("" + ChatColor.GREEN + pname + ChatColor.AQUA + " has " + ChatColor.DARK_RED + ChatColor.BOLD + "DIED");	
 		} else {
 			e.setDeathMessage("" + ChatColor.GREEN + pname + ChatColor.AQUA + " was killed by " + ChatColor.RED + p.getKiller().getName());
 		}
