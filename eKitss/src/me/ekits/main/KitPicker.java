@@ -83,30 +83,31 @@ public class KitPicker implements Listener {
 		
 		if (p.getOpenInventory().equals("Kits!")) {
 			if (e.getCurrentItem() != null) {
+				e.setCancelled(true);
 				if (e.getCurrentItem().getType().equals(Material.IRON_SWORD)) {
 					p.chat("/soldier");
 					p.closeInventory();
-					e.setCancelled(true);
+					
 				}
 				if (e.getCurrentItem().getType().equals(Material.BOW)) {
 					p.chat("/archer");
 					p.closeInventory();
-					e.setCancelled(true);
+					
 				}
 				if (e.getCurrentItem().getType()
 						.equals(Material.REDSTONE_LAMP_OFF)) {
 					p.closeInventory();
-					e.setCancelled(true);
+					
 				}
 				if(e.getCurrentItem().getType().equals(Material.DIAMOND_CHESTPLATE)){
 					p.chat("/tank");
 					p.closeInventory();
-					e.setCancelled(true);
+					
 				}
 				if(e.getCurrentItem().getType().equals(Material.GOLD_CHESTPLATE)){
 					p.chat("/medic");
 					p.closeInventory();
-					e.setCancelled(true);
+					
 				}
 			}
 
