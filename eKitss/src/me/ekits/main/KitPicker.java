@@ -42,7 +42,7 @@ public class KitPicker implements Listener {
 		ItemMeta am1 = a1.getItemMeta();
 		am1.setDisplayName(ChatColor.DARK_GRAY + "Archer");
 		List<String> lore1 = new ArrayList<String>();
-		lore1.add("" + ChatColor.GRAY + "Select the Arcer Class!");
+		lore1.add("" + ChatColor.GRAY + "Select the Archer Class!");
 		am1.setLore(lore1);
 		a1.setItemMeta(am1);
 		
