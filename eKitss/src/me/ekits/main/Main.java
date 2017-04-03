@@ -116,6 +116,7 @@ public class Main extends JavaPlugin{
 		this.getCommand("switcher").setExecutor(new Switcher(this));
 		this.getCommand("phantom").setExecutor(new Phantom(this));
 		this.getCommand("archer").setExecutor(new Archer(this));
+		this.getCommand("speedy").setExecutor(new Speedy(this));
 	}
 	//When plugin is enabled!
 	@Override
