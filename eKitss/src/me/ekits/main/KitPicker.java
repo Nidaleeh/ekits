@@ -69,7 +69,7 @@ public class KitPicker implements Listener {
 		ItemMeta AssassinMeta = AssassinLeash.getItemMeta();
 		AssassinMeta.setDisplayName(ChatColor.GREEN + "Assassin");
 		List<String> AssassinLore = new ArrayList<String>();
-		AssassinLore.add("" + ChatColor.GREEN + "Select the Assassin Class!");
+		AssassinLore.add("" + ChatColor.GRAY + "Select the Assassin Class!");
 		AssassinMeta.setLore(AssassinLore);
 		AssassinLeash.setItemMeta(AssassinMeta);
 
@@ -77,7 +77,7 @@ public class KitPicker implements Listener {
 		ItemMeta NinjaMeta = NinjaCoal.getItemMeta();
 		NinjaMeta.setDisplayName(ChatColor.GREEN + "Ninja");
 		List<String> NinjaLore = new ArrayList<String>();
-		NinjaLore.add("" + ChatColor.GREEN + "Select the Ninja Class!");
+		NinjaLore.add("" + ChatColor.GRAY + "Select the Ninja Class!");
 		NinjaMeta.setLore(NinjaLore);
 		NinjaCoal.setItemMeta(NinjaMeta);
 
@@ -85,7 +85,7 @@ public class KitPicker implements Listener {
 		ItemMeta ViperMeta = ViperEye.getItemMeta();
 		ViperMeta.setDisplayName(ChatColor.GREEN + "Viper");
 		List<String> ViperLore = new ArrayList<String>();
-		ViperLore.add("" + ChatColor.GREEN + "Select the Viper Class!");
+		ViperLore.add("" + ChatColor.GRAY + "Select the Viper Class!");
 		ViperMeta.setLore(ViperLore);
 		ViperEye.setItemMeta(ViperMeta);
 
@@ -93,7 +93,7 @@ public class KitPicker implements Listener {
 		ItemMeta GhostMeta = GhostPane.getItemMeta();
 		GhostMeta.setDisplayName(ChatColor.GREEN + "Ghost");
 		List<String> GhostLore = new ArrayList<String>();
-		GhostLore.add("" + ChatColor.GREEN + "Select the Ghost Class!");
+		GhostLore.add("" + ChatColor.GRAY + "Select the Ghost Class!");
 		GhostMeta.setLore(GhostLore);
 		GhostPane.setItemMeta(GhostMeta);
 
@@ -101,7 +101,7 @@ public class KitPicker implements Listener {
 		ItemMeta LavaMeta = LavaBucket.getItemMeta();
 		LavaMeta.setDisplayName(ChatColor.GREEN + "Lavahound");
 		List<String> LavaLore = new ArrayList<String>();
-		LavaLore.add("" + ChatColor.GREEN + "Select the Lava Class!");
+		LavaLore.add("" + ChatColor.GRAY + "Select the Lavahound Class!");
 		LavaMeta.setLore(LavaLore);
 		LavaBucket.setItemMeta(LavaMeta);
 
@@ -109,7 +109,7 @@ public class KitPicker implements Listener {
 		ItemMeta LochnessMeta = LochnessBucket.getItemMeta();
 		LochnessMeta.setDisplayName(ChatColor.GREEN + "Lochness");
 		List<String> LochnessLore = new ArrayList<String>();
-		LochnessLore.add("" + ChatColor.GREEN + "Select the Lochness Class!");
+		LochnessLore.add("" + ChatColor.GRAY + "Select the Lochness Class!");
 		LochnessMeta.setLore(LochnessLore);
 		LochnessBucket.setItemMeta(LochnessMeta);
 
@@ -117,9 +117,17 @@ public class KitPicker implements Listener {
 		ItemMeta SugarMeta = SpeedySugar.getItemMeta();
 		SugarMeta.setDisplayName(ChatColor.GREEN + "Speedy");
 		List<String> SpeedyLore = new ArrayList<String>();
-		SpeedyLore.add("" + ChatColor.GREEN + "Select the Speedy Class!");
+		SpeedyLore.add("" + ChatColor.GRAY + "Select the Speedy Class!");
 		SugarMeta.setLore(SpeedyLore);
 		SpeedySugar.setItemMeta(SugarMeta);
+
+		ItemStack FlintPyro = new ItemStack(Material.FLINT_AND_STEEL);
+		ItemMeta PyroMeta = FlintPyro.getItemMeta();
+		PyroMeta.setDisplayName(ChatColor.GOLD + "Pyro");
+		List<String> PyroLore = new ArrayList<String>();
+		PyroLore.add("" + ChatColor.GRAY + "Select the Pyro Class!");
+		PyroMeta.setLore(PyroLore);
+		FlintPyro.setItemMeta(PyroMeta);
 
 		inv.setItem(1, soldiersword);
 		inv.setItem(3, a1);
@@ -132,6 +140,7 @@ public class KitPicker implements Listener {
 		inv.setItem(17, LavaBucket);
 		inv.setItem(19, LochnessBucket);
 		inv.setItem(21, SpeedySugar);
+		inv.setItem(23, FlintPyro);
 
 		inv.setItem(44, off);
 		p.openInventory(inv);
@@ -203,6 +212,12 @@ public class KitPicker implements Listener {
 			if (e.getCurrentItem().getType().equals(Material.SUGAR)) {
 
 				p.chat("/speedy");
+				p.closeInventory();
+
+			}
+			if (e.getCurrentItem().getType().equals(Material.FLINT_AND_STEEL)) {
+
+				p.chat("/pyro");
 				p.closeInventory();
 
 			}

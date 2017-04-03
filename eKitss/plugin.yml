@@ -18,7 +18,7 @@ commands:
     description: Gives you the Medic kit!   
   lavahound:
     description: Gives you the Lavahound kit!          
-  lochness:
+  lochness:	
     description: Gives you the Lochness kit!          
   tank:
     description: Gives you the Tank kit!   
@@ -37,4 +37,6 @@ commands:
   archer:
     description: Gives you the Archer kit!       
   speedy:
-    description: Gives you the Speedy kit!                                                                         
+    description: Gives you the Speedy kit! 
+  pyro:
+    description: Gives you the Pyro kit!                                                                               

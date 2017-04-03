@@ -32,6 +32,7 @@ import me.ekits.kits.Lochness;
 import me.ekits.kits.Medic;
 import me.ekits.kits.Ninja;
 import me.ekits.kits.Phantom;
+import me.ekits.kits.Pyro;
 import me.ekits.kits.Soldier;
 import me.ekits.kits.Speedy;
 import me.ekits.kits.Switcher;
@@ -71,6 +72,7 @@ public class Main extends JavaPlugin{
     public ArrayList<String> switcher = new ArrayList<String>();
     public ArrayList<String> hit = new ArrayList<String>();
     public ArrayList<String> phantom = new ArrayList<String>();
+    public ArrayList<String> pyro = new ArrayList<String>();
     public ArrayList<String> tamedwolf = new ArrayList<String>();
 
     
@@ -100,7 +102,7 @@ public class Main extends JavaPlugin{
 
 	public void registerCommands(){
 		this.getCommand("soldier").setExecutor(new Soldier(this));
-		this.getCommand("ender").setExecutor(new Ender(this));
+		this.getCommand("ender").setExecutor(new Ender(this)); 
 		this.getCommand("ghost").setExecutor(new Ghost(this));
 		this.getCommand("ninja").setExecutor(new Ninja(this));
 		this.getCommand("assassin").setExecutor(new Assassin(this));
@@ -117,6 +119,7 @@ public class Main extends JavaPlugin{
 		this.getCommand("phantom").setExecutor(new Phantom(this));
 		this.getCommand("archer").setExecutor(new Archer(this));
 		this.getCommand("speedy").setExecutor(new Speedy(this));
+		this.getCommand("pyro").setExecutor(new Pyro(this));
 	}
 	//When plugin is enabled!
 	@Override
