@@ -72,6 +72,7 @@ public class PlayerListeners implements Listener{
 		plugin.phantom.remove(p.getName());
 		plugin.hit.remove(p.getName());
 		plugin.tamedwolf.remove(p.getName());
+		plugin.psycho.remove(p.getName());
 		}
 	@EventHandler
 	public void onSpawn(PlayerRespawnEvent e){

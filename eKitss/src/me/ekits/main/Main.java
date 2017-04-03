@@ -11,6 +11,7 @@ import me.ekits.abilities.Hitteleport;
 import me.ekits.abilities.Lava;
 import me.ekits.abilities.Lightning;
 import me.ekits.abilities.Poison;
+import me.ekits.abilities.Psychosis;
 import me.ekits.abilities.Randomteleport;
 import me.ekits.abilities.Regen;
 import me.ekits.abilities.Sneakattack;
@@ -32,6 +33,7 @@ import me.ekits.kits.Lochness;
 import me.ekits.kits.Medic;
 import me.ekits.kits.Ninja;
 import me.ekits.kits.Phantom;
+import me.ekits.kits.Psycho;
 import me.ekits.kits.Pyro;
 import me.ekits.kits.Soldier;
 import me.ekits.kits.Speedy;
@@ -74,6 +76,7 @@ public class Main extends JavaPlugin{
     public ArrayList<String> phantom = new ArrayList<String>();
     public ArrayList<String> pyro = new ArrayList<String>();
     public ArrayList<String> tamedwolf = new ArrayList<String>();
+    public ArrayList<String> psycho = new ArrayList<String>();
 
     
 	public void registerListeners(){
@@ -98,6 +101,7 @@ public class Main extends JavaPlugin{
 		pm.registerEvents(new Switch(this), this);
 		pm.registerEvents(new Hitteleport(this), this);
 		pm.registerEvents(new Speedy(this), this);
+		pm.registerEvents(new Psychosis(this), this);
 	}
 
 	public void registerCommands(){
@@ -120,6 +124,7 @@ public class Main extends JavaPlugin{
 		this.getCommand("archer").setExecutor(new Archer(this));
 		this.getCommand("speedy").setExecutor(new Speedy(this));
 		this.getCommand("pyro").setExecutor(new Pyro(this));
+		this.getCommand("psycho").setExecutor(new Psycho(this));
 	}
 	//When plugin is enabled!
 	@Override

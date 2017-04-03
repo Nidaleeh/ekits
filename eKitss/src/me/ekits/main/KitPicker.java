@@ -120,6 +120,46 @@ public class KitPicker implements Listener {
 		SpeedyLore.add("" + ChatColor.GRAY + "Select the Speedy Class!");
 		SugarMeta.setLore(SpeedyLore);
 		SpeedySugar.setItemMeta(SugarMeta);
+		
+		ItemStack FishingRod = new ItemStack(Material.FISHING_ROD);
+		ItemMeta FishingMeta = FishingRod.getItemMeta();
+		FishingMeta.setDisplayName(ChatColor.GOLD + "Fisherman");
+		List<String> FishingLore = new ArrayList<String>();
+		FishingLore.add("" + ChatColor.GRAY + "Select the Fishing Class!");
+		FishingMeta.setLore(FishingLore);
+		FishingRod.setItemMeta(FishingMeta);
+		
+		ItemStack Chameleon = new ItemStack(Material.GRASS);
+		ItemMeta ChameleonMeta = Chameleon.getItemMeta();
+		ChameleonMeta.setDisplayName(ChatColor.GOLD + "Chameleon");
+		List<String> ChameleonLore = new ArrayList<String>();
+		ChameleonLore.add("" + ChatColor.GRAY + "Select the Chameleon Class!");
+		ChameleonMeta.setLore(ChameleonLore);
+		Chameleon.setItemMeta(ChameleonMeta);
+		
+		ItemStack Ender = new ItemStack(Material.ENDER_PEARL);
+		ItemMeta EnderMeta = Ender.getItemMeta();
+		EnderMeta.setDisplayName(ChatColor.GOLD + "Ender");
+		List<String> EnderLore = new ArrayList<String>();
+		EnderLore.add("" + ChatColor.GRAY + "Select the Ender Class!");
+		EnderMeta.setLore(EnderLore);
+		Ender.setItemMeta(EnderMeta);
+		
+		ItemStack Phantom = new ItemStack(Material.FEATHER);
+		ItemMeta PhantomMeta = Phantom.getItemMeta();
+		PhantomMeta.setDisplayName(ChatColor.GOLD + "Phantom");
+		List<String> PhantomLore = new ArrayList<String>();
+		PhantomLore.add("" + ChatColor.GRAY + "Select the Phantom Class!");
+		PhantomMeta.setLore(PhantomLore);
+		Phantom.setItemMeta(PhantomMeta);
+		
+		ItemStack Switcher = new ItemStack(Material.SNOW_BALL);
+		ItemMeta SwitcherMeta = Switcher.getItemMeta();
+		SwitcherMeta.setDisplayName(ChatColor.GOLD + "Switcher");
+		List<String> SwitcherLore = new ArrayList<String>();
+		SwitcherLore.add("" + ChatColor.GRAY + "Select the Switcher Class!");
+		SwitcherMeta.setLore(SwitcherLore);
+		Switcher.setItemMeta(SwitcherMeta);
 
 		ItemStack FlintPyro = new ItemStack(Material.FLINT_AND_STEEL);
 		ItemMeta PyroMeta = FlintPyro.getItemMeta();
@@ -128,6 +168,17 @@ public class KitPicker implements Listener {
 		PyroLore.add("" + ChatColor.GRAY + "Select the Pyro Class!");
 		PyroMeta.setLore(PyroLore);
 		FlintPyro.setItemMeta(PyroMeta);
+		
+		ItemStack Psycho = new ItemStack(Material.SHEARS);
+		ItemMeta PsychoMeta = Psycho.getItemMeta();
+		PsychoMeta.setDisplayName(ChatColor.GOLD + "Psycho");
+		List<String> PsychoLore = new ArrayList<String>();
+		PsychoLore.add("" + ChatColor.GRAY + "Select the Psycho Class!");
+		PsychoLore.add("" + ChatColor.RED + "NEW!");
+		PsychoMeta.setLore(PsychoLore);
+		Psycho.setItemMeta(PsychoMeta);
+		
+		
 
 		inv.setItem(1, soldiersword);
 		inv.setItem(3, a1);
@@ -140,8 +191,14 @@ public class KitPicker implements Listener {
 		inv.setItem(17, LavaBucket);
 		inv.setItem(19, LochnessBucket);
 		inv.setItem(21, SpeedySugar);
-		inv.setItem(23, FlintPyro);
-
+		inv.setItem(23, FishingRod);
+		inv.setItem(25, Chameleon);
+		inv.setItem(27, Ender);
+		inv.setItem(29, Phantom);
+		inv.setItem(31, Switcher);
+		inv.setItem(33, FlintPyro);
+		inv.setItem(33, Psycho);
+		
 		inv.setItem(44, off);
 		p.openInventory(inv);
 	}
@@ -218,6 +275,12 @@ public class KitPicker implements Listener {
 			if (e.getCurrentItem().getType().equals(Material.FLINT_AND_STEEL)) {
 
 				p.chat("/pyro");
+				p.closeInventory();
+
+			}
+			if (e.getCurrentItem().getType().equals(Material.SHEARS)) {
+
+				p.chat("/psycho");
 				p.closeInventory();
 
 			}

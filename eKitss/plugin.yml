@@ -39,4 +39,7 @@ commands:
   speedy:
     description: Gives you the Speedy kit! 
   pyro:
-    description: Gives you the Pyro kit!                                                                               
+    description: Gives you the Pyro kit!
+  psycho:
+    description: Gives you the Psycho kit!
+                                                                             
