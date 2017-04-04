@@ -41,41 +41,9 @@ public boolean onCommand(CommandSender sender, Command cmd, String commandLabel,
 			p.getInventory().setLeggings(new ItemStack(Material.DIAMOND_LEGGINGS));
 			p.getInventory().setBoots(new ItemStack(Material.DIAMOND_BOOTS));
 			p.getInventory().addItem(Tanksword);
-			p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
-	         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
+			for(int i = 0; i < 34; i++){
+		         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
+			}
 			p.sendMessage(ChatColor.GOLD + "You have obtained the" + ChatColor.GREEN + " Tank " + ChatColor.GOLD + "kit!");
 		}
 		

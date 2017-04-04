@@ -70,7 +70,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String commandLabel,
 			p.getInventory().setLeggings(llegs);
 			p.getInventory().setBoots(lboots);
 			p.getInventory().addItem(soldiersword);
-			for(int i = 0; i < 35; i++){
+			for(int i = 0; i < 34; i++){
 		         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
 			}
 			p.sendMessage(ChatColor.GOLD + "You have obtained the" + ChatColor.GREEN + " Psycho " + ChatColor.GOLD + "kit!");
