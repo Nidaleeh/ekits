@@ -3,7 +3,7 @@ package me.ekits.listeners;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.craftbukkit.v1_8_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -119,17 +119,14 @@ public class PlayerListeners implements Listener {
 			p.getInventory().addItem(Ninjasword);
 		}
 	}
-
+	
 	@EventHandler
 	public void onEat(PlayerInteractEvent e) {
 		Player p = e.getPlayer();
-		if (p != null && p.getItemInHand() != null
-				&& p.getItemInHand().getItemMeta() != null
-				&& p.getItemInHand().getItemMeta().getDisplayName() != null) {
-			if (p.getInventory().getItemInHand().getType()
-					.equals(Material.MUSHROOM_SOUP)) {
-				if (e.getAction() == Action.RIGHT_CLICK_AIR
-						|| e.getAction() == Action.RIGHT_CLICK_BLOCK) {
+		if(p != null && p.getItemInHand() != null && p.getItemInHand().getItemMeta() != null && p.getItemInHand().getItemMeta().getDisplayName() != null){
+			if(p.getInventory().getItemInHand().getType() == (Material.MUSHROOM_SOUP)){
+			if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK){
+					p.sendMessage("hy");
 					p.setHealth(p.getHealth() + 7);
 					p.setItemInHand(new ItemStack(Material.BOWL));
 
