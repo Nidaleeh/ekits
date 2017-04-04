@@ -5,6 +5,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import me.ekits.abilities.Berserk;
+import me.ekits.abilities.Blind;
 import me.ekits.abilities.Fishhook;
 import me.ekits.abilities.Heal;
 import me.ekits.abilities.Hitteleport;
@@ -24,6 +25,7 @@ import me.ekits.abilities.Water;
 import me.ekits.abilities.Wolf;
 import me.ekits.kits.Archer;
 import me.ekits.kits.Assassin;
+import me.ekits.kits.BobRoss;
 import me.ekits.kits.Chameleon;
 import me.ekits.kits.Ender;
 import me.ekits.kits.Fisherman;
@@ -77,6 +79,8 @@ public class Main extends JavaPlugin{
     public ArrayList<String> pyro = new ArrayList<String>();
     public ArrayList<String> tamedwolf = new ArrayList<String>();
     public ArrayList<String> psycho = new ArrayList<String>();
+    public ArrayList<String> bobross = new ArrayList<String>();
+    public ArrayList<String> bobrosscd = new ArrayList<String>();
 
     
 	public void registerListeners(){
@@ -102,6 +106,7 @@ public class Main extends JavaPlugin{
 		pm.registerEvents(new Hitteleport(this), this);
 		pm.registerEvents(new Speedy(this), this);
 		pm.registerEvents(new Psychosis(this), this);
+		pm.registerEvents(new Blind(this), this);
 	}
 
 	public void registerCommands(){
@@ -125,6 +130,7 @@ public class Main extends JavaPlugin{
 		this.getCommand("speedy").setExecutor(new Speedy(this));
 		this.getCommand("pyro").setExecutor(new Pyro(this));
 		this.getCommand("psycho").setExecutor(new Psycho(this));
+		this.getCommand("bobross").setExecutor(new BobRoss(this));
 	}
 	//When plugin is enabled!
 	@Override

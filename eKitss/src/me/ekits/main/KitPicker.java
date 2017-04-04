@@ -174,9 +174,18 @@ public class KitPicker implements Listener {
 		PsychoMeta.setDisplayName(ChatColor.GOLD + "Psycho");
 		List<String> PsychoLore = new ArrayList<String>();
 		PsychoLore.add("" + ChatColor.GRAY + "Select the Psycho Class!");
-		PsychoLore.add("" + ChatColor.RED + "NEW!");
+		PsychoLore.add("" + ChatColor.GREEN + "NEW!");
 		PsychoMeta.setLore(PsychoLore);
 		Psycho.setItemMeta(PsychoMeta);
+		
+		ItemStack Bob = new ItemStack(Material.IRON_HOE);
+		ItemMeta BobMeta = Bob.getItemMeta();
+		BobMeta.setDisplayName(ChatColor.GOLD + "Bob Ross");
+		List<String> BobLore = new ArrayList<String>();
+		BobLore.add("" + ChatColor.GRAY + "Select the Bob Ross Class!");
+		BobLore.add("" + ChatColor.GREEN + "NEW!");
+		BobMeta.setLore(BobLore);
+		Bob.setItemMeta(BobMeta);
 		
 		
 
@@ -197,7 +206,8 @@ public class KitPicker implements Listener {
 		inv.setItem(29, Phantom);
 		inv.setItem(31, Switcher);
 		inv.setItem(33, FlintPyro);
-		inv.setItem(33, Psycho);
+		inv.setItem(34, Psycho);
+		inv.setItem(35, Bob);
 		
 		inv.setItem(44, off);
 		p.openInventory(inv);

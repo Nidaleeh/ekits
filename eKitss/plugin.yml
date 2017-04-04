@@ -42,4 +42,6 @@ commands:
     description: Gives you the Pyro kit!
   psycho:
     description: Gives you the Psycho kit!
+  psycho:
+    description: Gives you the Psycho kit!    
                                                                              
