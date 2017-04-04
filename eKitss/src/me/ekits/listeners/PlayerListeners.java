@@ -38,7 +38,9 @@ public class PlayerListeners implements Listener{
 		Ninjasword.setItemMeta(sm);
 		//
 		if(!(p.getInventory().contains(Ninjasword))){
-		p.getInventory().addItem(Ninjasword);
+		p.getInventory().clear();
+		p.getInventory().setHeldItemSlot(0);
+		p.getInventory().setItem(0, Ninjasword);
 		//
 	}
 	}

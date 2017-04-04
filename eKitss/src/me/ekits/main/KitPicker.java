@@ -288,6 +288,36 @@ public class KitPicker implements Listener {
 				p.closeInventory();
 
 			}
+			if (e.getCurrentItem().getType().equals(Material.SNOW_BALL)) {
+
+				p.chat("/switcher");
+				p.closeInventory();
+
+			}
+			if (e.getCurrentItem().getType().equals(Material.FEATHER)) {
+
+				p.chat("/phantom");
+				p.closeInventory();
+
+			}
+			if (e.getCurrentItem().getType().equals(Material.ENDER_PEARL)) {
+
+				p.chat("/ender");
+				p.closeInventory();
+
+			}
+			if (e.getCurrentItem().getType().equals(Material.GRASS)) {
+
+				p.chat("/chameleon");
+				p.closeInventory();
+
+			}
+			if (e.getCurrentItem().getType().equals(Material.FISHING_ROD)) {
+
+				p.chat("/fisherman");
+				p.closeInventory();
+
+			}
 			if (e.getCurrentItem().getType().equals(Material.SHEARS)) {
 
 				p.chat("/psycho");
