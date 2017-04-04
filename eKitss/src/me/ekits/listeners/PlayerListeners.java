@@ -8,12 +8,14 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockIgniteEvent;
 import org.bukkit.event.block.BlockIgniteEvent.IgniteCause;
+import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+
 import me.ekits.main.Main;
 
 public class PlayerListeners implements Listener{
@@ -43,6 +45,11 @@ public class PlayerListeners implements Listener{
 		p.getInventory().setItem(0, Ninjasword);
 		//
 	}
+	}
+		@EventHandler
+		public void onFood(FoodLevelChangeEvent e) {
+			e.setFoodLevel(20);
+			
 	}
 	@EventHandler
 	public void onDeath(PlayerDeathEvent e){

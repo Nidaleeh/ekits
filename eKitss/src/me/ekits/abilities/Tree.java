@@ -4,11 +4,9 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -49,14 +47,14 @@ public class Tree implements Listener{
 	    	
 	    	//
 	    	
-	    p.sendMessage("" + ChatColor.GREEN + ChatColor.BOLD + "You have healed " + ChatColor.UNDERLINE + ChatColor.GOLD + rightclick.getName());
-        rightclick.sendMessage("" + ChatColor.GOLD + rightclick.getName() + ChatColor.GREEN + ChatColor.BOLD + ChatColor.UNDERLINE + " You have been tree-ified");
+	    p.sendMessage("" + ChatColor.GREEN + "You have Tree-ified " + ChatColor.GOLD  + ChatColor.BOLD + rightclick.getName());
+        rightclick.sendMessage("" + ChatColor.GOLD + rightclick.getName() + ChatColor.GREEN + ChatColor.BOLD + ChatColor.UNDERLINE + " You have been Tree-ified");
 		
 		plugin.treecd.add(p.getName());
 		Bukkit.getServer().getScheduler().scheduleAsyncDelayedTask(plugin, new Runnable() {
             public void run() {
                     plugin.treecd.remove(p.getName());
-                    p.sendMessage("" + ChatColor.GREEN + ChatColor.BOLD + "You can heal again!");
+                    p.sendMessage("" + ChatColor.GREEN + ChatColor.BOLD + "You can Tree-ify again!");
             }
     }, 500);
     return;

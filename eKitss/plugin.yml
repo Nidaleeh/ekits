@@ -43,4 +43,6 @@ commands:
   psycho:
     description: Gives you the Psycho kit!  
   bobross:
-    description: Gives you the Bob Ross kit!                                                                                   
+    description: Gives you the Bob Ross kit!  
+  druid:
+    description: Gives you the Druid kit!                                                                                       

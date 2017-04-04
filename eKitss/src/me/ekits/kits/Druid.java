@@ -26,7 +26,7 @@ public class Druid implements CommandExecutor {
 			String commandLabel, String[] args) {
 
 		// Soldier Kit
-		if (cmd.getName().equalsIgnoreCase("soldier")
+		if (cmd.getName().equalsIgnoreCase("druid")
 				&& sender instanceof Player) {
 
 			Player p = (Player) sender;
@@ -44,6 +44,11 @@ public class Druid implements CommandExecutor {
 			soldiersword.addEnchantment(Enchantment.DAMAGE_ALL, 3);
 			soldiersword.addEnchantment(Enchantment.DURABILITY, 3);
 			soldiersword.setItemMeta(sm);
+			//wdaw
+			ItemStack druids = new ItemStack(Material.STICK);
+			ItemMeta dm = soldiersword.getItemMeta();
+			dm.setDisplayName("" + ChatColor.GOLD + "Tree Birth Giver");
+			druids.setItemMeta(dm);
 
 			// Legs
 			ItemStack llegs = new ItemStack(Material.LEATHER_LEGGINGS);
@@ -68,6 +73,7 @@ public class Druid implements CommandExecutor {
 			p.getInventory().setLeggings(llegs);
 			p.getInventory().setBoots(lboots);
 			p.getInventory().addItem(soldiersword);
+			p.getInventory().addItem(druids);
 			for (int i = 0; i < 35; i++) {
 				p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
 			}
