@@ -81,7 +81,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String commandLabel,
 			bw.setDisplayName("" + ChatColor.GOLD + "Pyro's Bow");
 			List<String> lore = new ArrayList<String>(); 
 			lore.add("" + ChatColor.RED + "Right-Click" + ChatColor.DARK_PURPLE + " to use shoot Fire Arrows!"); 
-			smokebomb.addEnchantment(Enchantment.ARROW_FIRE, 0);
+			smokebomb.addEnchantment(Enchantment.ARROW_FIRE, 1);
 			bw.setLore(lore); 
 			smokebomb.setItemMeta(bw);
 			
