@@ -3,6 +3,7 @@ package me.ekits.abilities;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -42,7 +43,10 @@ public class Tree implements Listener{
 	    	
 	    	rightclick.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 300, 255, true));
 	    	Location treeloc = rightclick.getLocation();
-	    	Bukkit.getServer()
+	    	Location treeloc2 = new Location(treeloc.getWorld(), treeloc.getX(), treeloc.getY() + 1, treeloc.getZ());
+	    	Bukkit.getServer().getWorld(rightclick.getWorld().getName()).getBlockAt(treeloc).setType(Material.LOG);
+	    	Bukkit.getServer().getWorld(rightclick.getWorld().getName()).getBlockAt(treeloc2).setType(Material.LOG);
+	    	
 	    	//
 	    	
 	    p.sendMessage("" + ChatColor.GREEN + ChatColor.BOLD + "You have healed " + ChatColor.UNDERLINE + ChatColor.GOLD + rightclick.getName());

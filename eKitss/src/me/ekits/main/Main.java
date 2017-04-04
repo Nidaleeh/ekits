@@ -20,12 +20,14 @@ import me.ekits.abilities.Stealth;
 import me.ekits.abilities.Swap;
 import me.ekits.abilities.Switch;
 import me.ekits.abilities.Teleport;
+import me.ekits.abilities.Tree;
 import me.ekits.abilities.Water;
 import me.ekits.abilities.Wolf;
 import me.ekits.kits.Archer;
 import me.ekits.kits.Assassin;
 import me.ekits.kits.BobRoss;
 import me.ekits.kits.Chameleon;
+import me.ekits.kits.Druid;
 import me.ekits.kits.Ender;
 import me.ekits.kits.Fisherman;
 import me.ekits.kits.Ghost;
@@ -107,6 +109,7 @@ public class Main extends JavaPlugin{
 		pm.registerEvents(new Hitteleport(this), this);
 		pm.registerEvents(new Speedy(this), this);
 		pm.registerEvents(new Blind(this), this);
+		pm.registerEvents(new Tree(this), this);
 	}
 
 	public void registerCommands(){
@@ -131,6 +134,7 @@ public class Main extends JavaPlugin{
 		this.getCommand("pyro").setExecutor(new Pyro(this));
 		this.getCommand("psycho").setExecutor(new Psycho(this));
 		this.getCommand("bobross").setExecutor(new BobRoss(this));
+		this.getCommand("druid").setExecutor(new Druid(this));
 	}
 	//When plugin is enabled!
 	@Override
