@@ -80,6 +80,8 @@ public class Main extends JavaPlugin{
     public ArrayList<String> psycho = new ArrayList<String>();
     public ArrayList<String> bobross = new ArrayList<String>();
     public ArrayList<String> bobrosscd = new ArrayList<String>();
+    public ArrayList<String> tree = new ArrayList<String>();
+    public ArrayList<String> treecd = new ArrayList<String>();
 
     
 	public void registerListeners(){
