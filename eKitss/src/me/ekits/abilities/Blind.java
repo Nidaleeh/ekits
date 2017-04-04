@@ -32,7 +32,7 @@ public class Blind implements Listener{
 		if(p.getInventory().getItemInHand().getItemMeta().getDisplayName().contains("Bob's Paintbrush")){
 		if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK){
 		for(Player radiusplayer : Bukkit.getServer().getOnlinePlayers()){
-			if(radiusplayer.getLocation().getX() - p.getLocation().getX() < 5 || radiusplayer.getLocation().getY() - p.getLocation().getY() < 5){
+			if(radiusplayer.getLocation().getX() - p.getLocation().getX() < 5 || radiusplayer.getLocation().getZ() - p.getLocation().getZ() < 5){
 				if(!radiusplayer.getName().equals(p.getName())){
 					radiusplayer.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 100, 1, true));
 					radiusplayer.sendMessage("" + ChatColor.DARK_RED + ChatColor.BOLD + "You have been blinded!");
