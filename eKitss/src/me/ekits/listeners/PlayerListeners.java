@@ -126,7 +126,11 @@ public class PlayerListeners implements Listener {
 			if(p.getInventory().getItemInHand().getType() == (Material.MUSHROOM_SOUP)){
 			if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK){
 					p.sendMessage("hy");
-					p.setHealth(p.getHealth() + 7);
+					if(p.getHealth() < 20-17.5){
+						p.setHealth(p.getHealth() + 7);
+					}else{
+						p.setHealth(p.getHealth() + (20 - p.getHealth()));
+					}
 					p.setItemInHand(new ItemStack(Material.BOWL));
 
 				
