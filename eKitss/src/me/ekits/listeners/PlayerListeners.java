@@ -3,6 +3,7 @@ package me.ekits.listeners;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.craftbukkit.v1_8_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -51,10 +52,14 @@ public class PlayerListeners implements Listener{
 			e.setFoodLevel(20);
 			
 	}
+		public void removeArrows(Player p){
+			((CraftPlayer)p).getHandle().getDataWatcher().watch(9, (byte)0);
+		}
 	@EventHandler
 	public void onDeath(PlayerDeathEvent e){
 		Player p = e.getEntity();
 		String pname = p.getName();
+		removeArrows(p);
 		if(p.getKiller() == null){
 			e.setDeathMessage("" + ChatColor.GREEN + pname + ChatColor.AQUA + " has " + ChatColor.DARK_RED + ChatColor.BOLD + "DIED");	
 		} else {
