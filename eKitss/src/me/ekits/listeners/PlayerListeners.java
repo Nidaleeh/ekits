@@ -73,6 +73,8 @@ public class PlayerListeners implements Listener{
 		plugin.hit.remove(p.getName());
 		plugin.tamedwolf.remove(p.getName());
 		plugin.psycho.remove(p.getName());
+		plugin.bobross.remove(p.getName());
+		plugin.bobrosscd.remove(p.getName());
 		}
 	@EventHandler
 	public void onSpawn(PlayerRespawnEvent e){
@@ -98,7 +100,7 @@ public class PlayerListeners implements Listener{
 	public void onDrop(PlayerDropItemEvent e){
 		e.getItemDrop().remove();
 		if(!(e.getItemDrop().getItemStack().getType() == (Material.BOWL))){
-			e.getPlayer().sendMessage("" + ChatColor.RED + ChatColor.BOLD	 + "Sorry," + ChatColor.GOLD + ChatColor.ITALIC + " but you " + ChatColor.YELLOW + ChatColor.UNDERLINE + "can't" + ChatColor.YELLOW + ChatColor.ITALIC + " drop this.");
+			e.getPlayer().sendMessage("" + ChatColor.RED + ChatColor.BOLD	 + "Sorry," + ChatColor.GOLD + ChatColor.ITALIC + " but you " + ChatColor.YELLOW + ChatColor.UNDERLINE + "can't" + ChatColor.GOLD + ChatColor.ITALIC + " drop this.");
 			e.setCancelled(true);
 		}
 		}  

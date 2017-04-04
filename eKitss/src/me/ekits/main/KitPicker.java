@@ -25,7 +25,7 @@ public class KitPicker implements Listener {
 	}
 
 	public static void openGUI(Player p) {
-		Inventory inv = Bukkit.createInventory(null, 45, ChatColor.DARK_AQUA
+		Inventory inv = Bukkit.createInventory(null, 54, ChatColor.DARK_AQUA
 				+ "Kits!");
 		ItemStack soldiersword = new ItemStack(Material.IRON_SWORD);
 		ItemMeta soldiermeta = soldiersword.getItemMeta();
@@ -189,27 +189,27 @@ public class KitPicker implements Listener {
 		
 		
 
-		inv.setItem(1, soldiersword);
-		inv.setItem(3, a1);
-		inv.setItem(5, TankChest);
-		inv.setItem(7, MedicChest);
-		inv.setItem(9, AssassinLeash);
-		inv.setItem(11, NinjaCoal);
-		inv.setItem(13, ViperEye);
-		inv.setItem(15, GhostPane);
-		inv.setItem(17, LavaBucket);
-		inv.setItem(19, LochnessBucket);
-		inv.setItem(21, SpeedySugar);
-		inv.setItem(23, FishingRod);
-		inv.setItem(25, Chameleon);
-		inv.setItem(27, Ender);
-		inv.setItem(29, Phantom);
-		inv.setItem(31, Switcher);
-		inv.setItem(33, FlintPyro);
-		inv.setItem(34, Psycho);
-		inv.setItem(35, Bob);
+		inv.setItem(0, soldiersword);
+		inv.setItem(1, a1);
+		inv.setItem(2, TankChest);
+		inv.setItem(3, MedicChest);
+		inv.setItem(23, AssassinLeash);
+		inv.setItem(18, NinjaCoal);
+		inv.setItem(19, ViperEye);
+		inv.setItem(20, GhostPane);
+		inv.setItem(21, LavaBucket);
+		inv.setItem(22, LochnessBucket);
+		inv.setItem(23, SpeedySugar);
+		inv.setItem(36, FishingRod);
+		inv.setItem(37, Chameleon);
+		inv.setItem(38, Ender);
+		inv.setItem(39, Phantom);
+		inv.setItem(40, Switcher);
+		inv.setItem(41, FlintPyro);
+		inv.setItem(42, Psycho);
+		inv.setItem(43, Bob);
 		
-		inv.setItem(44, off);
+		inv.setItem(53, off);
 		p.openInventory(inv);
 	}
 
@@ -291,6 +291,12 @@ public class KitPicker implements Listener {
 			if (e.getCurrentItem().getType().equals(Material.SHEARS)) {
 
 				p.chat("/psycho");
+				p.closeInventory();
+
+			}
+			if (e.getCurrentItem().getType().equals(Material.IRON_HOE)) {
+
+				p.chat("/bobross");
 				p.closeInventory();
 
 			}
