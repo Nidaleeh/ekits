@@ -12,7 +12,6 @@ import me.ekits.abilities.Hitteleport;
 import me.ekits.abilities.Lava;
 import me.ekits.abilities.Lightning;
 import me.ekits.abilities.Poison;
-import me.ekits.abilities.Psychosis;
 import me.ekits.abilities.Randomteleport;
 import me.ekits.abilities.Regen;
 import me.ekits.abilities.Sneakattack;
@@ -105,7 +104,6 @@ public class Main extends JavaPlugin{
 		pm.registerEvents(new Switch(this), this);
 		pm.registerEvents(new Hitteleport(this), this);
 		pm.registerEvents(new Speedy(this), this);
-		pm.registerEvents(new Psychosis(this), this);
 		pm.registerEvents(new Blind(this), this);
 	}
 
