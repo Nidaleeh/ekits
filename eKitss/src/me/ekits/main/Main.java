@@ -84,6 +84,7 @@ public class Main extends JavaPlugin{
     public ArrayList<String> bobrosscd = new ArrayList<String>();
     public ArrayList<String> tree = new ArrayList<String>();
     public ArrayList<String> treecd = new ArrayList<String>();
+    public ArrayList<String> rooted = new ArrayList<String>();
 
     
 	public void registerListeners(){

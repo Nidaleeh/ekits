@@ -84,6 +84,9 @@ public class PlayerListeners implements Listener{
 		plugin.psycho.remove(p.getName());
 		plugin.bobross.remove(p.getName());
 		plugin.bobrosscd.remove(p.getName());
+		plugin.rooted.remove(p.getName());
+		plugin.tree.remove(p.getName());
+		plugin.treecd.remove(p.getName());
 		}
 	@EventHandler
 	public void onSpawn(PlayerRespawnEvent e){
