@@ -14,9 +14,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
-
 import me.ekits.main.Main;
 
 public class Ninja implements CommandExecutor {
@@ -44,6 +41,7 @@ public boolean onCommand(CommandSender sender, Command cmd, String commandLabel,
          }
          plugin.kitused.add(p.getName());
          plugin.ninja2.add(p.getName());
+         plugin.addspeed.add(p.getName());
 			//
 			ItemStack Ninjasword = new ItemStack(Material.WOOD_SWORD);
 			ItemMeta sm = Ninjasword.getItemMeta();
@@ -96,7 +94,6 @@ public boolean onCommand(CommandSender sender, Command cmd, String commandLabel,
 			for(int i = 0; i < 34; i++){
 		         p.getInventory().addItem(new ItemStack(Material.MUSHROOM_SOUP));
 			}
-	         p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 99999, 0));
 			p.sendMessage(ChatColor.GOLD + "You have obtained the" + ChatColor.GREEN + " Ninja " + ChatColor.GOLD + "kit!");
 		}
 		

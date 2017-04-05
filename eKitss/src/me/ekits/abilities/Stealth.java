@@ -76,17 +76,19 @@ public class Stealth implements Listener {
 		if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK){
 	    p.sendMessage("" + ChatColor.GRAY + ChatColor.BOLD + "You are now invisible");
 	    p.getInventory().removeItem(smokebomb);
-	    p.removePotionEffect(PotionEffectType.SPEED);
 	    p.getInventory().setHelmet(new ItemStack(Material.AIR));
 	    p.getInventory().setChestplate(new ItemStack(Material.AIR));
 	    p.getInventory().setLeggings(new ItemStack(Material.AIR));
 	    p.getInventory().setBoots(new ItemStack(Material.AIR));
-		p.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 100, 0));
+		p.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 100, -1));
 		plugin.ninja.add(p.getName());
+		plugin.removespeed.add(p.getName());
+		plugin.addspeed.remove(p.getName());
 		Bukkit.getServer().getScheduler().scheduleAsyncDelayedTask(plugin, new Runnable() {
             public void run() {
                 plugin.ninja.remove(p.getName());
-                p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 99999, 0));
+                plugin.removespeed.remove(p.getName());
+                plugin.addspeed.add(p.getName());
                 p.getInventory().addItem(smokebomb);
         		p.getInventory().setHelmet(lhelm);
         		p.getInventory().setChestplate(lchest);
