@@ -54,6 +54,11 @@ public class Tree implements Listener{
 	            	Bukkit.getServer().getWorld(rightclick.getWorld().getName()).getBlockAt(treeloc).setType(Material.AIR);
 	    	    	Bukkit.getServer().getWorld(rightclick.getWorld().getName()).getBlockAt(treeloc2).setType(Material.AIR);
 	    	    	Bukkit.getServer().getWorld(rightclick.getWorld().getName()).getBlockAt(treeloc3).setType(Material.AIR);
+	    	    	p.sendMessage(rightclick.getWorld().getName());
+	    	    	p.sendMessage(	Bukkit.getServer().getWorld(rightclick.getWorld().getName()).getName());
+	    	    	p.sendMessage(treeloc.toString());
+	    	    	p.sendMessage(treeloc2.toString());
+	    	    	p.sendMessage(treeloc3.toString());
 	    	    	plugin.rooted.remove(rightclick.getName());
 	            }
 	    }, 300);
