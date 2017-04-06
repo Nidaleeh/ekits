@@ -3,7 +3,7 @@ package me.ekits.listeners;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.craftbukkit.v1_8_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,9 +15,12 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 import me.ekits.main.Main;
 
@@ -160,4 +163,14 @@ public class PlayerListeners implements Listener {
 			e.setCancelled(true);
 		}
 	}
+@EventHandler
+public void onSpeed(PlayerMoveEvent e){
+	Player p = e.getPlayer();
+	if(plugin.addspeed.contains(p.getName())){
+		p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 99999, 0));
+	}
+	if(plugin.removespeed.contains(p.getName())){
+		p.removePotionEffect(PotionEffectType.SPEED);
+}
+}
 }
